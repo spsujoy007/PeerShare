@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+body {
+  /* background: 
+    linear-gradient(45deg, #ebebea 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f5f2e8 75%),
+    linear-gradient(-45deg, transparent 75%, #f5f2e8 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px; */
+  background-color: #e8e5db;
+  color: #363636;
+  font-family: var(--font-geo), sans-serif;
+}
