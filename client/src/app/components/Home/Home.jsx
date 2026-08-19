@@ -1,7 +1,8 @@
+'use client';
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { TbPdf, TbTxt } from "react-icons/tb";
-import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
 import { FaPlus } from 'react-icons/fa';
 import { GoPlus } from 'react-icons/go';
 import { FiPlus } from 'react-icons/fi';
@@ -66,10 +67,29 @@ function SuggestedFiles() {
 
 export default function HomePage() {
 
+  const [hideSuggestedFiles, setHideSuggestedFiles] = useState(false);
+  const [handleInputFocus, setHandleInputFocus] = useState(false);
+
+
   return (
     <div className='md:w-full bg-[#ffffff4a] backdrop-blur-xs rounded-3xl  p-5 border-l border-t border-[#fff]'>
       <section className='flex justify-between items-center'>
-        <input type="text" className='shadow-2xl shadow-[#e7e7e7] py-3 px-5 rounded-full border-l border-t border-white bg-[#ffffff4a] backdrop-blur-xs outline-none w-[80%] md:w-[40%]' placeholder='search...' />
+
+        <div className='relative w-[80%] md:w-[40%]'>
+          <input onFocus={(e) => {
+            setHandleInputFocus(true);
+          }} 
+          onBlur={() => {
+            setHandleInputFocus(false);
+          }}
+          type="text" 
+          className={`relative shadow-2xl shadow-[#e7e7e7] py-3 px-5 rounded-full border-l border-t border-white bg-[#ffffff4a] backdrop-blur-xs outline-none w-full z-20 ${handleInputFocus ? 'rounded-b-none rounded-t-[25px] bg-white shadow-none' : ''}`} placeholder='search...' />
+
+          <div className={`absolute top-full min-h-[200px] border-t border-gray-200 rounded-t-none  rounded-b-[25px] bg-white w-full z-10 ${handleInputFocus ? 'block' : 'hidden'}`}>
+
+          </div>
+        </div>
+
         <div className='flex gap-4 items-center'>
           <button className='md:flex items-center gap-2 border-l border-t border-[#fff] rounded-full py-2 px-5 cursor-pointer bg-[#ffffff5d] font-bold hover:bg-white duration-150 hidden'>
             <TiPlus />
@@ -81,10 +101,19 @@ export default function HomePage() {
 
 
       <section className='mt-2 border-l border-t border-white bg-[#ffffff5d] p-5 rounded-3xl md:h-[80%]'>
-        <span className='text-black font-bold flex items-center gap-2 rounded-full cursor-pointer hover:bg-white w-[155px] py-1 px-3 duration-150'><FaAngleDown /> Suggested Files</span>
-        <div className='mt-5'>
-          <SuggestedFiles />
-        </div>
+        <span 
+          onClick={() => setHideSuggestedFiles(!hideSuggestedFiles)} 
+          className='text-black font-bold flex items-center gap-2 rounded-full cursor-pointer hover:bg-white w-[155px] py-1 px-3 duration-150 select-none'>
+            {hideSuggestedFiles ? <FaAngleRight /> : <FaAngleDown />} Suggested Files
+        </span>
+
+        {
+          !hideSuggestedFiles && (
+            <div className='mt-5'>
+              <SuggestedFiles />
+            </div>
+          )
+        }
       </section>
     </div>
   )
