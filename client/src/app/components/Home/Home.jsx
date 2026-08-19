@@ -10,9 +10,9 @@ import { CgLoadbarDoc } from 'react-icons/cg';
 
 function SuggestedFiles() {
   return (
-    <section className='grid lg:grid-cols-6 md:grid-cols-4 gap-2'>
+    <section className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4'>
       <div className='rounded-xl bg-white p-2 overflow-y-hidden '>
-        <Image className='w-[180px] h-[120px] rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
+        <Image className='w-full h-24 sm:h-28 md:h-32 object-cover rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
 
         <div className='mt-2 flex gap-2 items-center '>
           <div className='bg-red-500 inline rounded h-[16px]'><TbPdf className='text-white' /></div>
@@ -21,7 +21,7 @@ function SuggestedFiles() {
       </div>
 
       <div className='rounded-xl bg-white p-2 overflow-y-hidden'>
-        <Image className='w-[180px] h-[120px] rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
+        <Image className='w-full h-24 sm:h-28 md:h-32 object-cover rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
 
         <div className='mt-2 flex gap-2 items-center '>
           <div className='  h-[16px]'><CgLoadbarDoc className='text-blue-500' /></div>
@@ -29,7 +29,7 @@ function SuggestedFiles() {
         </div>
       </div>
       <div className='rounded-xl bg-white p-2 overflow-y-hidden'>
-        <Image className='w-[180px] h-[120px] rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
+        <Image className='w-full h-24 sm:h-28 md:h-32 object-cover rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
 
         <div className='mt-2 flex gap-2 items-center '>
           <div className='bg-red-500 inline rounded h-[16px]'><TbPdf className='text-white ' /></div>
@@ -37,7 +37,7 @@ function SuggestedFiles() {
         </div>
       </div>
       <div className='rounded-xl bg-white p-2 overflow-y-hidden'>
-        <Image className='w-[180px] h-[120px] rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
+        <Image className='w-full h-24 sm:h-28 md:h-32 object-cover rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
 
         <div className='mt-2 flex gap-2 items-center '>
           <div className='bg-red-500 inline rounded h-[16px]'><TbPdf className='text-white ' /></div>
@@ -45,7 +45,7 @@ function SuggestedFiles() {
         </div>
       </div>
       <div className='rounded-xl bg-white p-2 overflow-y-hidden'>
-        <Image className='w-[180px] h-[120px] rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
+        <Image className='w-full h-24 sm:h-28 md:h-32 object-cover rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
 
         <div className='mt-2 flex gap-2 items-center '>
           <div className='bg-red-500 inline rounded h-[16px]'><TbPdf className='text-white ' /></div>
@@ -53,7 +53,7 @@ function SuggestedFiles() {
         </div>
       </div>
       <div className='rounded-xl bg-white p-2 overflow-y-hidden'>
-        <Image className='w-[180px] h-[120px] rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
+        <Image className='w-full h-24 sm:h-28 md:h-32 object-cover rounded-xl' alt='file preview' width={600} height={400} src={'https://placehold.co/600x400/png'}/>
 
         <div className='mt-2 flex gap-2 items-center '>
           <div className='bg-red-500 inline rounded h-[16px]'><TbPdf className='text-white ' /></div>
@@ -67,11 +67,11 @@ function SuggestedFiles() {
 export default function HomePage() {
 
   return (
-    <div className='w-full bg-[#ffffff4a] backdrop-blur-xs rounded-3xl h-full p-5 border-l border-t border-[#fff]'>
+    <div className='md:w-full bg-[#ffffff4a] backdrop-blur-xs rounded-3xl  p-5 border-l border-t border-[#fff]'>
       <section className='flex justify-between items-center'>
-        <input type="text" className='shadow-2xl shadow-[#e7e7e7] py-3 px-5 rounded-full border-l border-t border-white bg-[#ffffff4a] backdrop-blur-xs outline-none w-[40%]' placeholder='search...' />
+        <input type="text" className='shadow-2xl shadow-[#e7e7e7] py-3 px-5 rounded-full border-l border-t border-white bg-[#ffffff4a] backdrop-blur-xs outline-none w-[80%] md:w-[40%]' placeholder='search...' />
         <div className='flex gap-4 items-center'>
-          <button className='flex items-center gap-2 border-l border-t border-[#fff] rounded-full py-2 px-5 cursor-pointer bg-[#ffffff5d] font-bold'>
+          <button className='md:flex items-center gap-2 border-l border-t border-[#fff] rounded-full py-2 px-5 cursor-pointer bg-[#ffffff5d] font-bold hover:bg-white duration-150 hidden'>
             <TiPlus />
             Join Room
           </button>
@@ -80,8 +80,8 @@ export default function HomePage() {
       </section>
 
 
-      <section className='mt-2 border-l border-t border-white bg-[#ffffff5d] p-5 rounded-3xl h-[80%]'>
-        <span className='text-black font-bold flex items-center gap-2 rounded-full cursor-pointer hover:bg-white w-[155px] py-1 px-3'><FaAngleDown /> Suggested Files</span>
+      <section className='mt-2 border-l border-t border-white bg-[#ffffff5d] p-5 rounded-3xl md:h-[80%]'>
+        <span className='text-black font-bold flex items-center gap-2 rounded-full cursor-pointer hover:bg-white w-[155px] py-1 px-3 duration-150'><FaAngleDown /> Suggested Files</span>
         <div className='mt-5'>
           <SuggestedFiles />
         </div>
