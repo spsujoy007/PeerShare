@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans w-[1500px] mx-auto">{children}</body>
     </html>
   );
 }
