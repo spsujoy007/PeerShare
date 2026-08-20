@@ -1,6 +1,7 @@
 import { Geo } from "next/font/google";
 import "./globals.css";
 
+
 const geo = Geo({
   variable: "--font-geo",
   weight: "400",
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans lg:w-[1500px] mx-auto">{children}</body>
+      <body className="min-h-full flex flex-col font-sans lg:w-[1500px] mx-auto">
+        {children}
+      </body>
     </html>
   );
 }

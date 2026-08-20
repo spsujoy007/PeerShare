@@ -9,10 +9,9 @@ export default function SideNav() {
             <h1 className='text-3xl font-bold text-orange-500'>PeerShare</h1>
         </div>
         <ul className='text-xl'>
-            {/* <li className='mb-2 bg-[#ffffff8b] cursor-pointer p-3 rounded-lg border-l border-t border-[#fff] flex  items-center gap-4 w-[130px]'><TiPlus /> New</li> */}
-            <li className='mb-2 bg-[#ffffff8b] cursor-pointer p-3 rounded-lg border-l border-t border-[#fff]'>Home</li>
-            <li className='mb-2 hover:bg-[#ffffff8b] cursor-pointer p-3 rounded-lg '>Shared with me</li>
-            <li className='mb-2 hover:bg-[#ffffff8b] cursor-pointer p-3 rounded-lg '>Join room</li>
+            <Link href="/"><li className='mb-2 bg-[#ffffff8b] cursor-pointer p-3 rounded-lg border-l border-t border-[#fff]'>Home</li></Link>
+            <Link href="/shared"><li className='mb-2 hover:bg-[#ffffff8b] cursor-pointer p-3 rounded-lg '>Shared with me</li></Link>
+            <Link href="/join"><li className='mb-2 hover:bg-[#ffffff8b] cursor-pointer p-3 rounded-lg '>Join room</li></Link>
         </ul>
     </div>
   )

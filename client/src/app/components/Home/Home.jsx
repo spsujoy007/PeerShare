@@ -116,7 +116,7 @@ export default function HomePage() {
         
         <section className='mt-2 flex gap-2'>
           
-          <div className='rounded-xl bg-[#ffffff99] group p-2 overflow-y-hidden w-29 border-l border-t border-[#fff] backdrop-blur-2xl cursor-pointer'>
+          <Link href="/file/text" className='rounded-xl bg-[#ffffff99] group p-2 overflow-y-hidden w-29 border-l border-t border-[#fff] backdrop-blur-2xl cursor-pointer'>
             <div className='flex justify-center group-hover:bg-[#ffffff8b] items-center  rounded-xl h-10 w-full  bg-[#ededed]   duration-150'>
               <TiPlus />
             </div>
@@ -124,7 +124,7 @@ export default function HomePage() {
               <div className='h-[16px]'><CgLoadbarDoc className='text-blue-500' /></div>
               <h1 className='text-sm'>Blank file</h1>
             </div>
-          </div>
+          </Link>
 
           <div className='rounded-xl bg-[#ffffff99] group p-2 overflow-y-hidden w-29 border-l border-t border-[#fff] backdrop-blur-2xl cursor-pointer'>
             <div className='flex justify-center group-hover:bg-[#ffffff8b] items-center  rounded-xl h-10 w-full  bg-[#ededed]   duration-150'>
