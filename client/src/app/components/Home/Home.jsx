@@ -108,7 +108,7 @@ export default function HomePage() {
   const [hideSuggestedFiles, setHideSuggestedFiles] = useState(false);
 
   return (
-    <div className='md:w-full bg-[#ffffff4a] backdrop-blur-xs rounded-3xl  p-5 border-l border-t border-[#fff]'>
+    <div className='md:w-full h-full bg-[#ffffff4a] backdrop-blur-xs rounded-3xl  p-5 border-l border-t border-[#fff]'>
       
       <HomeNavgiation />
 
