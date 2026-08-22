@@ -1,10 +1,13 @@
 'use client'
 import React, { useState } from 'react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa6'
+import { useModalStore } from '@/store/useModalStore'
 
-export default function page() {
+export default function TextPage() {
 
-  const[fontSize, setFontSize] = useState(20)
+  const [fontSize, setFontSize] = useState(20)
+  const [textContent, setTextContent] = useState('')
+  const openModal = useModalStore(state => state.openModal)
 
   return (
     <div className='bg-[#ffffff4a] backdrop-blur-xs rounded-3xl h-full p-5 border-l border-t border-[#fff]'>
@@ -30,18 +33,21 @@ export default function page() {
                 a <FaAngleDown className='text-xs' />
               </button>
             </div>
+            
+            <div className=' bg-[#ffffff4a] backdrop-blur-xs border border-[#fff] rounded-lg select-none gap-2 overflow-hidden'>
+              <button className='px-4 py-2 cursor-pointer hover:bg-[#ffffffbb]' onClick={() => openModal(textContent, fontSize)}>
+                Preview
+              </button>
+            </div>
           </div>
 
         </section>
 
         <textarea placeholder='type your text...' autoFocus name="textfile" id="textfile" 
-          className='bg-[#ffffff] text-xl text-black placeholder:text-gray-500 border border-[#fff] p-3 rounded-2xl w-full max-h-[94%] min-h-[94%] outline-none text-emerald-500'rows="10" column="50" style={{ fontSize: `${fontSize}px` }}>
+          value={textContent}
+          onChange={(e) => setTextContent(e.target.value)}
+          className='bg-[#ffffff] text-xl text-black placeholder:text-gray-500 border border-[#fff] p-3 rounded-2xl w-full max-h-[92%] min-h-[92%] outline-none text-black selection:bg-orange-500 selection:text-white'rows="10" column="50" style={{ fontSize: `${fontSize}px` }}>
         </textarea>
-
-
-        <div id="modal">
-          {/* // preview of text file full view  */}
-        </div>
     </div>
   )
 }

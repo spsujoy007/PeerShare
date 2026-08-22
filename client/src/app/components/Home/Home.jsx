@@ -126,7 +126,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          <div className='rounded-xl bg-[#ffffff99] group p-2 overflow-y-hidden w-29 border-l border-t border-[#fff] backdrop-blur-2xl cursor-pointer'>
+          <Link href="/file/code" className='rounded-xl bg-[#ffffff99] group p-2 overflow-y-hidden w-29 border-l border-t border-[#fff] backdrop-blur-2xl cursor-pointer'>
             <div className='flex justify-center group-hover:bg-[#ffffff8b] items-center  rounded-xl h-10 w-full  bg-[#ededed]   duration-150'>
               <TiPlus />
             </div>
@@ -134,7 +134,7 @@ export default function HomePage() {
               <div className='h-[16px]'><CgCode className='text-green-500' /></div>
               <h1 className='text-sm'>Blank code</h1>
             </div>
-          </div>
+          </Link>
 
         </section>
 

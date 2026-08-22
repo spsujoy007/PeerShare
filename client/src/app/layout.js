@@ -1,6 +1,6 @@
 import { Geo } from "next/font/google";
 import "./globals.css";
-
+import GlobalModal from "./components/shared/GlobalModal";
 
 const geo = Geo({
   variable: "--font-geo",
@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col font-sans lg:w-[1500px] mx-auto">
         {children}
+        <GlobalModal />
       </body>
     </html>
   );

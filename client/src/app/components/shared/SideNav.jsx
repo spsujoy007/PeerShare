@@ -16,7 +16,7 @@ export default function SideNav() {
   };
 
   return (
-    <div className='w-75  bg-[#ffffff4a] backdrop-blur-xs rounded-3xl h-full p-5 border-l border-t border-[#fff] md:block hidden'>
+    <div className='w-75 bg-[#ffffff4a] backdrop-blur-xs rounded-3xl h-[90vh] p-5 border-l border-t border-[#fff] md:block hidden'>
         <div className='mb-8 mt-5'>
             <Link href="/"><h1 className='text-3xl font-bold text-orange-500 select-none cursor-pointer flex items-center gap-2'><Image src="/PeerShare.png" alt="PeerShare" width={40} height={40} /> PeerShare</h1></Link>
         </div>
